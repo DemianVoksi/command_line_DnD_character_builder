@@ -15,5 +15,5 @@ I plan to include additional options from official
 D&D materials as soon as I can.
 
 To start the character build process, run __main__.py
-which is located in /dndcharacterbuilder/scripts/
+which is located in scripts/
 
