@@ -1,0 +1,8 @@
+*~
+*#
+*'
+scripts/*~
+scripts/*#
+scripts/*'
+scripts/__pycache__/
+.git/
