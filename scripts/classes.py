@@ -139,13 +139,15 @@ def class_choice(list_choice, classlist):
 
 
 def cidentitytovariable():
-    '''Creates a class char_class from your chosen class.'''
+    '''Creates a class char_class from your chosen class.
+    Called by __main__.'''
     global char_class
     char_class = class_choice(classes, cclasses)
 
 
 def hit_points_calc():
-    '''Adds base HP and constitution modifier.'''
+    '''Adds base HP and constitution modifier.
+    Called by __main__.'''
     char_class.hit_points_final = char_class.hit_points + races.char_race.conmodifier
     print(f"Your HP is {char_class.hit_points_final}.")
 
@@ -153,7 +155,8 @@ def hit_points_calc():
 def chooseprof(a, clsskill):
     '''Template for chosing a class proficiency.
     a is "a skill" if it is chosen first or "another" if chosen later
-    Clsskill is ie., allskills or barbarianskills.'''
+    Clsskill is ie., allskills or barbarianskills.
+    Called by allclassprof().'''
 
     while True:
         choice1 = str(input(f"Please choose {a} skill from: {clsskill} "))
@@ -166,7 +169,8 @@ def chooseprof(a, clsskill):
 
 
 def allclassprof():
-    '''Chooses and prints your class proficiencies.'''
+    '''Chooses and prints your class proficiencies.
+    Called by __main__.'''
     print("Now it's time to choose your class proficiencies: ")
 
     if char_class.name == 'barbarian':
@@ -321,7 +325,8 @@ def allclassprof():
 
 
 def featsspellsintro():
-    '''Intro for featandspellclass()'''
+    '''Intro for featandspell*class*()
+    Called by __main__.'''
     print("It is time to see and choose your class features and spells.")
 
 
@@ -338,7 +343,8 @@ def spellchooser(spell, classspells, cantriporspell):
 
 
 def featandspellbarbarian():
-    '''Chooses/appends and prints feats and/or spells for a barbarian.'''
+    '''Chooses/appends and prints feats and/or spells for a barbarian.
+    Called by __main__.'''
     class_features.append('rage')
     class_features.append('unarmored defense')
 
@@ -347,7 +353,8 @@ def featandspellbarbarian():
 
 
 def featandspellbard():
-    '''Chooses/appends and prints feats and/or spells for a bard.'''
+    '''Chooses/appends and prints feats and/or spells for a bard.
+    Called by __main__.'''
     print(f"You can choose two cantrips from this list: {bardcantrips}")
     spellchooser('bardcantrip1', bardcantrips, class_cantrips)
     spellchooser('bardcantrip2', bardcantrips, class_cantrips)
@@ -369,7 +376,8 @@ def featandspellbard():
 
 
 def featandspellcleric():
-    '''Chooses/appends and prints feats and/or spells for a cleric.'''
+    '''Chooses/appends and prints feats and/or spells for a cleric.
+    Called by __main__.'''
     print(f"You can choose three cantrips from this list: {clericcantrips}")
     spellchooser('clericcantrip1', clericcantrips, class_cantrips)
     spellchooser('clericcantrip2', clericcantrips, class_cantrips)
@@ -424,7 +432,8 @@ def featandspellcleric():
 
 
 def featandspelldruid():
-    '''Chooses/appends and prints feats and/or spells for a druid.'''
+    '''Chooses/appends and prints feats and/or spells for a druid.
+    Called by __main__.'''
     print(f"You can choose two cantrips from this list: {druidcantrips}")
     spellchooser('druidcantrip1', druidcantrips, class_cantrips)
     spellchooser('druidcantrip2', druidcantrips, class_cantrips)
@@ -446,7 +455,8 @@ def featandspelldruid():
 
 
 def featandspellfighter():
-    '''Chooses/appends and prints feats and/or spells for a fighter.'''
+    '''Chooses/appends and prints feats and/or spells for a fighter.
+    Called by __main__.'''
     print(f"Choose your fighting style between: {fighter_fighting_styles}")
     while True:
         fighting_style1 = str(input("Choose your fighting style: "))
@@ -462,7 +472,8 @@ def featandspellfighter():
 
 
 def featandspellmonk():
-    '''Chooses/appends and prints feats and/or spells for a monk.'''
+    '''Chooses/appends and prints feats and/or spells for a monk.
+    Called by __main__.'''
     print('\n')
     class_features.append('unarmored defense')
     class_features.append('martial arts')
@@ -470,7 +481,8 @@ def featandspellmonk():
 
 
 def featandspellpaladin():
-    '''Chooses/appends and prints feats and/or spells for a paladin.'''
+    '''Chooses/appends and prints feats and/or spells for a paladin.
+    Called by __main__.'''
     print('\n')
     class_features.append('divine sense')
     class_features.append('lay on hands')
@@ -478,7 +490,8 @@ def featandspellpaladin():
 
 
 def featandspellranger():
-    '''Chooses/appends and prints feats and/or spells for a ranger.'''
+    '''Chooses/appends and prints feats and/or spells for a ranger.
+    Called by __main__.'''
     print('\n')
     class_features.append('favored enemy')
     class_features.append('natural explorer')
@@ -486,7 +499,8 @@ def featandspellranger():
 
 
 def featandspellrogue():
-    '''Chooses/appends and prints feats and/or spells for a rogue.'''
+    '''Chooses/appends and prints feats and/or spells for a rogue.
+    Called by __main__.'''
     print('\n')
     class_features.append('expertise')
     class_features.append('sneak attack')
@@ -495,7 +509,8 @@ def featandspellrogue():
 
 
 def featandspellsorcerer():
-    '''Chooses/appends and prints feats and/or spells for a sorcerer.'''
+    '''Chooses/appends and prints feats and/or spells for a sorcerer.
+    Called by __main__.'''
     print(f"You can choose four cantrips from this list: {sorcerercantrips}")
     spellchooser('sorcerercantrip1', sorcerercantrips, class_cantrips)
     spellchooser('sorcerercantrip2', sorcerercantrips, class_cantrips)
@@ -524,7 +539,8 @@ def featandspellsorcerer():
 
 
 def featandspellwarlock():
-    '''Chooses/appends and prints feats and/or spells for a warlock.'''
+    '''Chooses/appends and prints feats and/or spells for a warlock.
+    Called by __main__.'''
     print(f"You can choose two cantrips from this list: {warlockcantrips}")
     spellchooser('warlockcantrip1', warlockcantrips, class_cantrips)
     spellchooser('warlockcantrip2', warlockcantrips, class_cantrips)
@@ -545,7 +561,8 @@ def featandspellwarlock():
 
 
 def featandspellwizard():
-    '''Chooses/appends and prints feats and/or spells for a wizard.'''
+    '''Chooses/appends and prints feats and/or spells for a wizard.
+    Called by __main__.'''
     print(f"You can choose three cantrips from this list: {wizardcantrips}")
     spellchooser('wizardcantrip1', wizardcantrips, class_cantrips)
     spellchooser('wizardcantrip2', wizardcantrips, class_cantrips)
@@ -571,7 +588,8 @@ def featandspellwizard():
 
 
 def fighter_primary_ability():
-    '''Chooses a fighter's primary ability.'''
+    '''Chooses a fighter's primary ability.
+    Called by __main__.'''
     while True:
         ability = str(input(f"Please choose your primary ability between: {fighterprimabs} "))
         if ability in fighterprimabs:

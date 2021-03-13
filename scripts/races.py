@@ -225,13 +225,15 @@ def race_choice(list_choice, classlist):
 
 
 def ridentitytovariable():
-    '''Turns the char_race variable into a class of a chosen race.'''
+    '''Turns the char_race variable into a class of a chosen race.
+    Called by __main__.'''
     global char_race
     char_race = race_choice(races, craces)
 
 
 def print_racial_proficiencies():
-    '''Prints your racial proficiencies.'''
+    '''Prints your racial proficiencies.
+    Called by __main__.'''
     print("\n")
     print("Your racial proficiencies are:")
     print(f"Weapons: {char_race.weaponsprof}")

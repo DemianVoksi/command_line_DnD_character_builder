@@ -7,17 +7,20 @@ import races
 
 
 def dy(y):
-    '''Sets the number of sides of the die.'''
+    '''Sets the number of sides of the die.
+    Called by xdy(x, y).'''
     return randint(1, y)
 
 
 def xdy(x, y):
-    '''Sets the number of dy-sided dies rolled.'''
+    '''Sets the number of dy-sided dies rolled.
+    Called by roll(die).'''
     return list(dy(y) for _ in range(x))
 
 
 def rollintro():
-    '''Intro to the rolling question.'''
+    '''Intro to the rolling question.
+    Called by __main__.'''
     print("\n")
     print("It's time to find out your ability scores.")
     print("You have two options: you can roll for ability scores or you can use the default roll die is: 15, 14, 13, 12, 10, 8.")
@@ -25,7 +28,7 @@ def rollintro():
 
 def roll(die):
     '''Base 4d6 roll and removal of the smallest number.
-    Used by def appendaj().'''
+    Called by def appendaj().'''
     die = xdy(4, 6)
     die.remove(min(die))
     return sum(die)
@@ -33,7 +36,7 @@ def roll(die):
 
 def apendaj():
     '''Appends the rolls to the base ability score list.
-    Used by roller().'''
+    Called by roller().'''
     base_ability_scores.clear()
     base_ability_scores.append(roll('dice1'))
     base_ability_scores.append(roll('dice2'))
@@ -46,13 +49,13 @@ def apendaj():
 
 def printbas():
     '''Prints the base ability scores list.
-    Used by roller().'''
+    Called by roller().'''
     return base_ability_scores
 
 
 def roller():
     '''Roll a 4d6 or go with the default roll.
-    Used by main module.'''
+    Called by __main__.'''
     print("\n")
     print("It's time to find out your ability scores.")
     print("You have two options: you can roll for ability scores or you can use the default roll die is: 15, 14, 13, 12, 10, 8.")
@@ -86,7 +89,7 @@ def roller():
 
 def scores_abilities(ability, abilityname):
     '''Chooses a score for an ability.
-    Used by appendscore().'''
+    Called by setscore().'''
     while True:
         ability = int(input(f"Select one of your scores as your {abilityname} score: "))
         if ability not in base_ability_scores:
@@ -101,7 +104,7 @@ def scores_abilities(ability, abilityname):
 
 def setscore():
     '''Sets a score for the races.char_race.ability variables.
-    Used by main module.'''
+    Called by __main__.'''
     races.char_race.stre = scores_abilities('strength', 'strength')
     print(f"Your strength is {races.char_race.stre}.")
 
@@ -122,7 +125,8 @@ def setscore():
 
 
 def baseabilities():
-    '''Prints base ability scores.'''
+    '''Prints base ability scores.
+    Called by __main__.'''
     print('\n')
     print("You have finished choosing your base ability scores. They are: ")
     print("Ability", '\t', "Score")
@@ -137,7 +141,8 @@ def baseabilities():
 
 
 def modifyabilities():
-    '''Calls on the class method to modify base ability scores.'''
+    '''Calls on the class method to modify base ability scores.
+    Called by __main__.'''
     races.char_race.stre_modified()
     races.char_race.dex_modified()
     races.char_race.con_modified()
@@ -147,7 +152,8 @@ def modifyabilities():
 
 
 def modifiedabilities():
-    '''Prints modified abilities.'''
+    '''Prints modified abilities.
+    Called by __main__.'''
     print('\n')
     print("We now have to apply racial modifiers to your scores. Your modified ability scores look like this: ")
     print("Ability", '\t', "Score")
@@ -189,7 +195,8 @@ def halfelf_choice():
 
 
 def halfelf_abilities():
-    '''Sets half elf modified abilities.'''
+    '''Sets half elf modified abilities.
+    Called by __main__.'''
     print('''But, since your character is a half elf, there is one more step to complete.''')
     print('''Half elves automatically increase their charisma by 2 points, but can add one more point to two abilities of their choosing.''')
     halfelf_choice()
@@ -197,7 +204,8 @@ def halfelf_abilities():
 
 
 def modifiers_intro():
-    '''Intro to modifiers. Called by main module.'''
+    '''Intro to modifiers. 
+    Called by __main__.'''
     print("Now that you have your modified ability scores, we have to see how your scores will influence your game.")
     print("A lot of the time that you try to do something in D&D, you will have to roll a dice to see how well your attempt to do so went.")
     print("For example, if you try to hit your enemy with a rock, you might have to roll to see how good that went.")
@@ -212,7 +220,7 @@ def modifiers(ab):
     '''Ab is the ability score (races.char_race.abilitymodified),
     and the function calculates the ability modifier according
     to the ability score.
-    Used by declare_modifier().'''
+    Called by declare_modifier().'''
     if ab == int(1):
         abb = int(-5)
         return abb
@@ -267,7 +275,7 @@ def modifiers(ab):
 
 
 def declare_modifier():
-    '''Used by main module.'''
+    '''Called by main module.'''
     races.char_race.stremodifier = modifiers(races.char_race.stremodified)
     races.char_race.dexmodifier = modifiers(races.char_race.dexmodified)
     races.char_race.conmodifier = modifiers(races.char_race.conmodified)

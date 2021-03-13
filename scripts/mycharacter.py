@@ -30,7 +30,8 @@ character1 = mycharacter("", "", "", "", "")
 
 
 def intro():
-    '''Intro to the program.'''
+    '''Intro to the program.
+    Called by __main__.'''
     print("Greetings, adventurer!")
     print("Welcome to the Dungeons & Dragons character builder.")
     print("Are you new to the game? Have no worries!")
@@ -39,7 +40,8 @@ def intro():
 
 
 def plyrname():
-    '''Requests player's name.'''
+    '''Requests player's name.
+    Called by __main__.'''
     print("Let's find out your name and your character's name!")
     name = str(input("First of all, tell me your name: "))
     print(f"Welcome, {name}!")
@@ -48,7 +50,8 @@ def plyrname():
 
 
 def character():
-    '''Requests character's name.'''
+    '''Requests character's name.
+    Called by __main__.'''
     character_name = str(input("And what is your character's name? "))
     print(
         f"Ok, {character1.playername}, your character's name is {character_name}!"
@@ -58,7 +61,8 @@ def character():
 
 
 def level():
-    '''Sets level at 1.'''
+    '''Sets level at 1.
+    Called by __main__.'''
     lvl = 1
     character1.level = copy.deepcopy(lvl)
     print(f"You will be starting at level {character1.level}.")
@@ -66,7 +70,8 @@ def level():
 
 
 def sex():
-    '''Chooses character's sex.'''
+    '''Chooses character's sex.
+    Called by __main__.'''
 
     print("Please choose your character's sex. Press (1) for female or press (2) for male: ")
     while True:
@@ -90,7 +95,8 @@ def sex():
 
 
 def alignment():
-    '''Chooses character's alignment.'''
+    '''Chooses character's alignment.
+    Called by __main__.'''
 
     print(f"It is time to choose your alignment. Please choose one from {alignments}.")
 
@@ -106,7 +112,8 @@ def alignment():
 
 
 def background():
-    '''Opportunity to write the character's backstory.'''
+    '''Opportunity to write the character's backstory.
+    Called by __main__.'''
     global background_story_final
 
     print('\n')
@@ -125,7 +132,8 @@ def background():
 
 
 def finalstats():
-    '''Prints results of the character creator process.'''
+    '''Prints results of the character creator process.
+    Called by __main__.'''
     print('\n')
     print("Congratulations, you are done with your character build!")
     print("This is what you have created:")
@@ -174,8 +182,8 @@ def finalstats():
     print("\n")
 
     print("Class proficiencies:")
-    print(f"Armor: {classes.char_class.armorprof}")
     print(f"Weapons: {classes.char_class.weaponsprof}")
+    print(f"Armor: {classes.char_class.armorprof}")
     print(f"Tools: {classes.char_class.toolsprof}")
     print(f"Skills: {classes.char_class.skills}")
     print(f"Saving throws: {classes.char_class.saving_throw_proficiencies}")
@@ -189,9 +197,9 @@ def finalstats():
     print("\n")
 
     print("Equipment:")
-    print(f"Weapons are: {weapons.charweaponschoice}")
-    print(f"Armor is: {armor.chararmorchoice}")
-    print(f"Equipment is: {armor.charequipmentchoice}, {backgrounds.char_background.equipment}")
+    print(f"Your weapons are: {weapons.charweaponschoice}")
+    print(f"Your armor is: {armor.chararmorchoice}")
+    print(f"Your equipment is: {armor.charequipmentchoice}, {backgrounds.char_background.equipment}")
     print("\n")
 
     print("Features and spells (if applicable):")
@@ -205,7 +213,8 @@ def finalstats():
 
 
 def savechar():
-    '''Gives option to save the created character in a text file.'''
+    '''Gives option to save the created character in a text file.
+    Called by __main__.'''
     while True:
         tosave = int(input("Press (1) to save your character to a text file or press (2) to skip this step: "))
         if tosave == 1:
