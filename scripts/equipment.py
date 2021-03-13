@@ -12,7 +12,8 @@ import subclasses
 
 
 def barbarianequipment():
-    '''Chooses equipment for a barbarian.'''
+    '''Chooses equipment for a barbarian.
+    Called by __main__.'''
     print("It's time to choose two pieces of equipment: ")
 
     while True:
@@ -62,7 +63,8 @@ def barbarianequipment():
 
 
 def bardequipment():
-    '''Chooses equipment for a bard.'''
+    '''Chooses equipment for a bard.
+    Called by __main__.'''
     print("It's time to choose three pieces of equipment.")
 
     while True:
@@ -124,7 +126,8 @@ def bardequipment():
 
 
 def clericequipment():
-    '''Chooses equipment for a cleric.'''
+    '''Chooses equipment for a cleric.
+    Called by __main__.'''
     print("It's time to choose four pieces of equipment: ")
 
     if 'warhammer' in races.char_race.weaponsprof or 'warhammer' in classes.char_class.weaponsprof or 'warhammer' in subclasses.char_subclass_prof or 'martial weapons' in races.char_race.weaponsprof or 'martial weapons' in classes.char_class.weaponsprof or 'martial weapons' in subclasses.char_subclass_prof or 'melee weapons' in races.char_race.weaponsprof or 'melee weapons' in classes.char_class.weaponsprof or 'melee weapons' in subclasses.char_subclass_prof or 'martial melee weapons' in races.char_race.weaponsprof or 'martial melee weapons' in classes.char_class.weaponsprof or 'martial melee weapons' in subclasses.char_subclass_prof:
@@ -212,7 +215,8 @@ def clericequipment():
 
 
 def druidequipment():
-    '''Chooses equipment for a druid.'''
+    '''Chooses equipment for a druid.
+    Called by __main__.'''
     print("It's time to choose two pieces of equipment.")
     print("To choose a wooden shield, press (1) and to choose any simple weapon, press (2). ")
     while True:
@@ -265,7 +269,8 @@ def druidequipment():
 
 
 def fighterequipment():
-    '''Chooses equipment for a fighter.'''
+    '''Chooses equipment for a fighter.
+    Called by __main__.'''
     print("It is time to choose several pieces of equipment. ")
     print("Press (1) if you want to choose leather armor and a longbow, or press (2) if you want to choose a chain mail.")
     while True:
@@ -361,7 +366,8 @@ def fighterequipment():
 
 
 def monkequipment():
-    '''Chooses equipment for a monk.'''
+    '''Chooses equipment for a monk.
+    Called by __main__.'''
     print("It is time to choose two pieces of equipment.")
     print("Press (1) to choose a shortsword or press (2) to choose any simple weapon.")
     while True:
@@ -403,7 +409,8 @@ def monkequipment():
 
 
 def paladinequipment():
-    '''Chooses equipment for a paladin.'''
+    '''Chooses equipment for a paladin.
+    Called by __main__.'''
     print("It is time to choose several pieces of equipment.")
     print("Press (1) to choose a shield and any martial weapon or press (2) to choose two martial weapons.")
     while True:
@@ -481,7 +488,8 @@ def paladinequipment():
 
 
 def rangerequipment():
-    '''Chooses equipment for a ranger.'''
+    '''Chooses equipment for a ranger.
+    Called by __main__.'''
     print("It is time to choose several pieces of equipment.")
     print("Press (1) to choose scale mail or press (2) to choose leather armor.")
     while True:
@@ -542,7 +550,8 @@ def rangerequipment():
 
 
 def rogueequipment():
-    '''Chooses equipment for a rogue.'''
+    '''Chooses equipment for a rogue.
+    Called by __main__.'''
     print("It is time to choose several pieces of equipment.")
     print("Press (1) to choose a rapier or press (2) to choose a shortsword.")
     while True:
@@ -594,7 +603,8 @@ def rogueequipment():
 
 
 def sorcererequipment():
-    '''Chooses equipment for a sorcerer.'''
+    '''Chooses equipment for a sorcerer.
+    Called by __main__.'''
     print("Its is time to choose several pieces of equipment.")
     print("Press (1) to choose a light crossbow or press (2) to choose any simple weapon.")
     while True:
@@ -648,7 +658,8 @@ def sorcererequipment():
 
 
 def warlockequipment():
-    '''Chooses equipment for a warlock.'''
+    '''Chooses equipment for a warlock.
+    Called by __main__.'''
     print("Its is time to choose several pieces of equipment.")
     print("Press (1) to choose a light crossbow or press (2) to choose any simple weapon.")
     while True:
@@ -712,7 +723,8 @@ def warlockequipment():
 
 
 def wizardequipment():
-    '''Chooses equipment for a wizard.'''
+    '''Chooses equipment for a wizard.
+    Called by __main__.'''
     print("Its is time to choose several pieces of equipment.")
     print("Press (1) to choose a quarterstaff or press (2) to choose a dagger.")
     while True:

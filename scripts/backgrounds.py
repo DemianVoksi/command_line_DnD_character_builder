@@ -193,6 +193,7 @@ def background_choice():
 
 
 def bidentitytovariable():
-    '''Ports background choice to class char_background'''
+    '''Ports background choice to class char_background.
+    Called by __main__.'''
     global char_background
     char_background = background_choice()
