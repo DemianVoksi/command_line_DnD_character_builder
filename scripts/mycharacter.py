@@ -174,8 +174,8 @@ def finalstats():
     print("\n")
 
     print("Class proficiencies:")
-    print(f"Armor: {classes.char_class.armorprof}")
     print(f"Weapons: {classes.char_class.weaponsprof}")
+    print(f"Armor: {classes.char_class.armorprof}")
     print(f"Tools: {classes.char_class.toolsprof}")
     print(f"Skills: {classes.char_class.skills}")
     print(f"Saving throws: {classes.char_class.saving_throw_proficiencies}")
@@ -189,9 +189,9 @@ def finalstats():
     print("\n")
 
     print("Equipment:")
-    print(f"Weapons are: {weapons.charweaponschoice}")
-    print(f"Armor is: {armor.chararmorchoice}")
-    print(f"Equipment is: {armor.charequipmentchoice}, {backgrounds.char_background.equipment}")
+    print(f"Your weapons are: {weapons.charweaponschoice}")
+    print(f"Your armor is: {armor.chararmorchoice}")
+    print(f"Your equipment is: {armor.charequipmentchoice}, {backgrounds.char_background.equipment}")
     print("\n")
 
     print("Features and spells (if applicable):")
