@@ -42,7 +42,7 @@ criminal = character_background(
 )
 
 criminal_spy = character_background(
-    'criminal (spy)', 'deception and stealth',
+    'criminal spy', 'deception and stealth',
     "one type of gaming set, thieves' tools", 'None',
     'a crowbar, and a set of dark common clothes including a hood',
     '15 gp', 'Spy Contact'
@@ -173,14 +173,17 @@ def background_choice():
     '''Chooses a character background.
     Called by bidentitytovariable()'''
     print("\n")
-    print(f"It is time to choose your character's background. You can choose between the following: {backgrounds}")
+    print(
+        f"It is time to choose your character's background. You can choose between the following: {backgrounds}")
 
     while True:
-        identity_choice = str(input("What is your character's background going to be? "))
+        identity_choice = str(
+            input("What is your character's background going to be? "))
         if identity_choice in backgrounds:
             break
         else:
-            print("Please check if you have wrote the name of your background correctly. Use lowercase letters.")
+            print(
+                "Please check if you have wrote the name of your background correctly. Use lowercase letters.")
 
     for n in cbackgrounds:
         if identity_choice in n.name:
